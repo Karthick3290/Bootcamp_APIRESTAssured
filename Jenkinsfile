@@ -47,6 +47,9 @@ pipeline {
                 }
                 sh 'cd api-tests && bash run-api-tests.sh'
                 }
+                post{
+                sh 'cd api-tests && bash mvn-cleanup.sh'
+                }
 
         }
 //         stage('UI test') {
