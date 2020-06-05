@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 public class JuiceShopTest {
     @BeforeTest
     public void initialization(){
-        RestAssured.baseURI="http://juice-shop:3000";
+        RestAssured.baseURI=System.getenv("JUICE_SHOP_URL");
+//        RestAssured.baseURI="http://juice-shop:3000";
     }
     @Test
     public void newUser(){
